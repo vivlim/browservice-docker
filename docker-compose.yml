@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+    browservice:
+        build: .
+        privileged: true # tries to move to a new namespace
+        volumes:
+            - './session:/session'
+        ports:
+            - '3737:8080'
